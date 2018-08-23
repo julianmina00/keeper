@@ -12,6 +12,29 @@ Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Obser
 
 The maze is randomly generated and is represented by an array of 40x40 cells. Each Cell can be ***EMPTY***, a ***WALL***, a ***KEY*** or the ***DOOR***.
 
+ ``` [language]
+package tws.keeper.model;
+
+/**
+ * Represent the contents of a Cell
+ */
+public enum Cell {
+
+    WALL("wall"), PATH("path"), KEY("key"), DOOR("door");
+
+    private String stringValue;
+
+    Cell(String theValue) {
+        stringValue = theValue;
+    }
+
+    public String toString() {
+        return stringValue;
+    }
+
+}
+```
+
 The keys, the door and the keeper are placed in random positions. The maze can always be solved.
 
 The **Maze** is **Observable**, which means that we can look up, down, left or right from our current Position, which will return a **Cell** value. We can also retrieve the total number of keys (it would be always 7), the keys that have already been found, and our current **Position**. We we can also know if the maze have been completed.
