@@ -1,6 +1,8 @@
 # Keeper of the Seven Keys
 ## Full stack coding challenge
+
 ### The problem
+
 The Keeper of the Seven Keys is lost in a maze. There is an exit but it’s locked. He needs to find the seven keys to open the door and escape.
 
 Use Java 8+ to code some logic capable of finding the keys and escape any random maze. Use any front end technology to create a web page that can display the maze and show the Keeper of the Keys finding its way out. Create a REST API that can communicate the front end and the back end.
@@ -8,43 +10,44 @@ Use Java 8+ to code some logic capable of finding the keys and escape any random
 Web users should be able to start/stop the game or reboot the system (creating a new maze). When the Keeper finds the seven keys and then the door, the web page should display a message indicating that the mission has been accomplished. 
 
 ### The framework
-Some Java objects (Maze, Position), some interfaces (Keeper, Observable) and some enumerations (Action, Cell) will be provided to you. These classes cannot be modified.
 
-The maze is randomly generated and is represented by an array of 40x40 cells. Each Cell can be EMPTY, a WALL, a KEY or the DOOR.
+Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Observable**) and some enumerations (**Action**, **Cell**) will be provided to you. These classes cannot be modified.
+
+The maze is randomly generated and is represented by an array of 40x40 cells. Each Cell can be ***EMPTY***, a ***WALL***, a ***KEY*** or the ***DOOR***.
 
 The keys, the door and the keeper are placed in random positions. The maze can always be solved.
 
-The Maze is Observable, which means that we can look up, down, left or right from our current Position, which will return a Cell value. We can also retrieve the total number of keys (it would be always 7), the keys that have already been found, and our current  Position. We we can also know if the maze have been completed.
+The **Maze** is **Observable**, which means that we can look up, down, left or right from our current Position, which will return a **Cell** value. We can also retrieve the total number of keys (it would be always 7), the keys that have already been found, and our current **Position**. We we can also know if the maze have been completed.
 
-The logic of the keeper should implement the Keeper interface. The system should create a new Maze instance passing an instance of the keeper logic in the constructor. The system should then call the act method of the keeper, each time passing in an observable instance of the maze. 
+The logic of the keeper should implement the **Keeper** interface. The system should create a new **Maze** instance passing an instance of the keeper logic in the constructor. The system should then call the *act* method of the keeper, each time passing in an observable instance of the maze. The keeper logic should each time decide what to do next and return an Action. 
 
-The keeper logic should each time decide what to do next and return an Action.   
-The system should keep calling the act method until the maze is solved or the user wants to stop the game.
+The system should keep calling the *act* method until the maze is solved or the user wants to stop the game.
 
 The Keeper should eventually find the seven keys and then find the door, optimising the route as much as possible.
 
 ### The solution
-First of all, build the keeper logic: a class that implements the Keeper interface and is able to solve any Maze by a finite number of calls to its act method.
+
+First of all, build the keeper logic: a class that implements the **Keeper** interface and is able to solve any **Maze** by a finite number of calls to its act method.
 
 Then build a game system that can instantiate keepers and mazes, keep track of the status of each particular game, etc. and build a REST API on top of it that makes this usable by the Front End.
 
-Finally build a website where users can see the Maze and the Keeper, with UI controls to start the game (make the keeper solve the maze one step at a time), stop the game, generate a new maze, and anything else you consider useful or fun.
+Finally build a website where users can see the **Maze** and the **Keeper**, with UI controls to start the game (make the keeper solve the maze one step at a time), stop the game, generate a new maze, and anything else you consider useful or fun.
 
 The solution must be written in Java and has to be compatible with the provided framework, which is written in Java 8.
 
-It has to use Maven to compile, test and run.
+It has to use **Maven** to compile, test and run.
 
 Please upload the project to GitHub. It must have a readme.md file  that contains, at least:
 
-Your full name
-The mvn command required to build and start the site
-The local URL of the web page
-Instructions to operate the site
-Basic description of the architecture
-Basic description of the keeper AI
-
+* Your full name
+* The mvn command required to build and start the site
+* The local URL of the web page
+* Instructions to operate the site
+* Basic description of the architecture
+* Basic description of the keeper AI
 
 ### Evaluation criteria
+
 Different aspects of the solution will be taken into consideration for the final score:
 #### Correctness 
 The solution should solve the problem in the most practical way possible, ideally with no bugs or unhandled edge cases.
@@ -70,6 +73,7 @@ The site should be visually pleasing and fun to use.
 Solve the challenge with as less code as possible without sacrificing any of the above.
 
 ### Hints
+
 At the very least, the solution and the provided framework should be separate maven modules, the later been a dependency of the former.
 
 Separation of concerns principles are always helpful.
@@ -92,5 +96,4 @@ There are many different devices and browsers out there. Responsive design is a 
 
 Images are great. SVG have some cool advantages.
 
-
-Good luck!
+**Good luck!**
