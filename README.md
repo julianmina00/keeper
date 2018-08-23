@@ -46,27 +46,27 @@ Basic description of the keeper AI
 
 ### Evaluation criteria
 Different aspects of the solution will be taken into consideration for the final score:
-Correctness 
+#### Correctness 
 The solution should solve the problem in the most practical way possible, ideally with no bugs or unhandled edge cases.
-Design
+#### Design
 OOP principles should be present throughout the solution. It should be simple, intuitive and easy to understand.
-Performance
+#### Performance
 The solution should make optimal use of resources such as CPU, memory or disk.
-Modularity
+#### Modularity
 Use separate modules to a reasonable exempt, without over-engineering.
-Technology
+#### Technology
 The solution should make use of frameworks and libraries to solve common problems. 
-Tests
+#### Tests
 Everything should be reasonably unit tested. Tests should guarantee correctness. Edge cases or negative flows should be also tested.
-Documentation
+#### Documentation
 The code, the API and the site should all be documented (formally when possible).
-Maintainability
+#### Maintainability
 The solution should be maintainable by a development team. This means, among other things, that it should be ready to accommodate future requirements with minimum effort.
-Reusability
+#### Reusability
 Whenever possible, parts of the solution should be ready to be reused in other projects. 
-UI and UX
+#### UI and UX
 The site should be visually pleasing and fun to use.
-Simplicity
+#### Simplicity
 Solve the challenge with as less code as possible without sacrificing any of the above.
 
 ### Hints
