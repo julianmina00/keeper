@@ -14,7 +14,7 @@ Web users should be able to start/stop the game or reboot the system (creating a
 
 Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Observable**) and some enumerations (**Action**, **Cell**) will be provided to you. ***These classes cannot be modified***.
 
-![Framework](https://i.imgur.com/JBbQtZJm.png)
+![Framework](https://i.imgur.com/JBbQtZJl.png)
 
 The maze is randomly generated and is represented by an array of 40x40 cells. Each Cell can be ***EMPTY***, a ***WALL***, a ***KEY*** or the ***DOOR***.
 
