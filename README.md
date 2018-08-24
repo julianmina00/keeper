@@ -75,7 +75,7 @@ public class Position {
 }
 ```
 
-The **Maze** is **Observable**, which means that we can look up, down, left or right from our current Position, which will return a **Cell** value. We can also retrieve the total number of keys (it would be always 7), the keys that have already been found, and our current **Position**. We we can also know if the maze have been completed.
+The **Maze** is **Observable**, which means that we can look up, down, left or right from our current Position, which will return a **Cell** value. We can also retrieve the total number of keys (it would be always 7), the keys that have already been found, and our current **Position**. We can also know if the maze have been completed.
 
 ```java
 package tws.keeper.model;
