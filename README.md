@@ -2,7 +2,7 @@
 
 The Keeper of the Seven Keys is lost in a maze. There is an exit but it’s locked. He needs to find the seven keys to open the door and escape.
 
-![Keeper of the Seven Keys](https://i.imgur.com/Nd87llO.png | width=100)
+![Keeper of the Seven Keys](https://i.imgur.com/8K246hG.png)
 
 * Use Java 8+ to code some logic capable of finding the keys and escape any random maze. 
 * Use any front end technology to create a web page that can display the maze and show the Keeper of the Keys finding its way out. 
@@ -13,6 +13,8 @@ Web users should be able to start/stop the game or reboot the system (creating a
 ## The framework
 
 Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Observable**) and some enumerations (**Action**, **Cell**) will be provided to you. ***These classes cannot be modified***.
+
+![Framework](https://i.imgur.com/JBbQtZJ.png)
 
 The maze is randomly generated and is represented by an array of 40x40 cells. Each Cell can be ***EMPTY***, a ***WALL***, a ***KEY*** or the ***DOOR***.
 
@@ -133,6 +135,8 @@ First of all, build the keeper logic: a class that implements the **Keeper** int
 Then build a game system that can instantiate keepers and mazes, keep track of the status of each particular game, etc. and build a REST API on top of it that makes this usable by the Front End.
 
 Finally build a website where users can see the **Maze** and the **Keeper**, with UI controls to start the game (make the keeper solve the maze one step at a time), stop the game, generate a new maze, and anything else you consider useful or fun.
+
+![Solution](https://i.imgur.com/PuQiysT.png)
 
 The solution must be written in Java and has to be compatible with the provided framework, which is written in Java 8.
 
