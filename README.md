@@ -2,6 +2,7 @@
 
 The Keeper of the Seven Keys is lost in a maze. There is an exit but it’s locked. He needs to find the seven keys to open the door and escape.
 
+<img src="https://i.imgur.com/8K246hG.png" width="256">
 ![Keeper of the Seven Keys](https://i.imgur.com/8K246hG.png)
 
 * Use Java 8+ to code some logic capable of finding the keys and escape any random maze. 
