@@ -130,7 +130,7 @@ The system should keep calling the *act* method until the maze is solved or the 
 
 # The solution
 
-First of all, build the keeper logic: a class that implements the **Keeper** interface and is able to solve any **Maze** by a finite number of calls to its act method.
+First of all, build the keeper logic: a class that implements the **Keeper** interface and is able to solve any **Maze** by a finite number of calls to its *act* method.
 
 Then build a game system that can instantiate keepers and mazes, keep track of the status of each particular game, etc. and build a REST API on top of it that makes this usable by the Front End.
 
