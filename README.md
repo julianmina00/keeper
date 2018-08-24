@@ -2,7 +2,9 @@
 
 The Keeper of the Seven Keys is lost in a maze. There is an exit but it’s locked. He needs to find the seven keys to open the door and escape.
 
-Use Java 8+ to code some logic capable of finding the keys and escape any random maze. Use any front end technology to create a web page that can display the maze and show the Keeper of the Keys finding its way out. Create a REST API that can communicate the front end and the back end.
+* Use Java 8+ to code some logic capable of finding the keys and escape any random maze. 
+* Use any front end technology to create a web page that can display the maze and show the Keeper of the Keys finding its way out. 
+* Create a REST API that can communicate the front end and the back end.
 
 Web users should be able to start/stop the game or reboot the system (creating a new maze). When the Keeper finds the seven keys and then the door, the web page should display a message indicating that the mission has been accomplished. 
 
@@ -71,11 +73,56 @@ public class Position {
 
 The **Maze** is **Observable**, which means that we can look up, down, left or right from our current Position, which will return a **Cell** value. We can also retrieve the total number of keys (it would be always 7), the keys that have already been found, and our current **Position**. We we can also know if the maze have been completed.
 
-The logic of the keeper should implement the **Keeper** interface. The system should create a new **Maze** instance passing an instance of the keeper logic in the constructor. The system should then call the *act* method of the keeper, each time passing in an observable instance of the maze. The keeper logic should each time decide what to do next and return an Action. 
+```java
+package tws.keeper.model;
 
-The system should keep calling the *act* method until the maze is solved or the user wants to stop the game.
+public interface Observable {
 
-The Keeper should eventually find the seven keys and then find the door, optimising the route as much as possible.
+    Cell lookUp();
+    Cell lookDown();
+    Cell lookLeft();
+    Cell lookRight();
+    int getKeysFound();
+    int getTotalNumberOfKeys();
+    boolean isMazeCompleted();
+    Position getKeeperPosition();
+    
+}
+```
+
+The logic of the keeper should implement the **Keeper** interface. The system should create a new **Maze** instance passing an instance of the keeper logic in the constructor. The system should then call the *act* method of the keeper, each time passing in an observable instance of the maze. 
+
+```java
+package tws.keeper.model;
+
+/**
+ * Keeper interface
+ */
+public interface Keeper {
+    Action act(Observable maze);
+}
+```
+
+The keeper logic should each time decide what to do next and return an **Action**.
+
+```java
+package tws.keeper.model;
+
+/**
+ * This is what a keeper can do
+ */
+public enum Action {
+
+    GO_UP,
+    GO_DOWN,
+    GO_LEFT,
+    GO_RIGHT,
+    DO_NOTHING
+
+}
+```
+
+The system should keep calling the *act* method until the maze is solved or the user wants to stop the game. The Keeper should eventually find the seven keys and then find the door, optimising the route as much as possible.
 
 ## The solution
 
