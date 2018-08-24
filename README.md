@@ -10,7 +10,7 @@ The Keeper of the Seven Keys is lost in a maze. There is an exit but it’s lock
 
 Web users should be able to start/stop the game or reboot the system (creating a new maze). When the Keeper finds the seven keys and then the door, the web page should display a message indicating that the mission has been accomplished. 
 
-## The framework
+# The framework
 
 Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Observable**) and some enumerations (**Action**, **Cell**) will be provided to you. ***These classes cannot be modified***.
 
@@ -128,7 +128,7 @@ public enum Action {
 
 The system should keep calling the *act* method until the maze is solved or the user wants to stop the game. The Keeper should eventually find the seven keys and then find the door, optimising the route as much as possible.
 
-## The solution
+# The solution
 
 First of all, build the keeper logic: a class that implements the **Keeper** interface and is able to solve any **Maze** by a finite number of calls to its act method.
 
@@ -151,7 +151,7 @@ Please upload the project to GitHub. It must have a readme.md file  that contain
 * Basic description of the architecture
 * Basic description of the keeper AI
 
-## Evaluation criteria
+# Evaluation criteria
 
 Different aspects of the solution will be taken into consideration for the final score:
 #### Correctness 
@@ -177,7 +177,7 @@ The site should be visually pleasing and fun to use.
 #### Simplicity
 Solve the challenge with as less code as possible without sacrificing any of the above.
 
-## Hints
+# Hints
 
 At the very least, the solution and the provided framework should be separate maven modules, the later been a dependency of the former.
 
@@ -200,5 +200,18 @@ Front End can be pure HTML+CSS with some JS. We like Angular and React too!
 There are many different devices and browsers out there. Responsive design is a plus.
 
 Images are great. SVG have some cool advantages.
+
+```javascript
+function mazeToHtml() {
+    html = "";
+    for(var v = 0; v < maze.cells.length; v++) {
+        html+="<div class=\"mazerow\">";
+        var row = maze.cells[v];
+        for(var h = 0; h < row.length; h++) html+="<div id=\"h"+h+"v"+v+"\" class=\"mazebrick "+row[h]+"\"></div>";
+        html+="</div>";
+    }
+    return html;
+}
+```
 
 **Good luck!**
