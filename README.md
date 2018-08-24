@@ -8,7 +8,7 @@ Web users should be able to start/stop the game or reboot the system (creating a
 
 ## The framework
 
-Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Observable**) and some enumerations (**Action**, **Cell**) will be provided to you. These classes cannot be modified.
+Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Observable**) and some enumerations (**Action**, **Cell**) will be provided to you. ***These classes cannot be modified***.
 
 The maze is randomly generated and is represented by an array of 40x40 cells. Each Cell can be ***EMPTY***, a ***WALL***, a ***KEY*** or the ***DOOR***.
 
@@ -35,7 +35,39 @@ public enum Cell {
 }
 ```
 
-The keys, the door and the keeper are placed in random positions. The maze can always be solved.
+The keys, the door and the keeper are placed in random **Positions**. The maze can always be solved.
+
+``` [language]
+package tws.keeper.model;
+
+public class Position {
+
+    private final int vertical, horizontal;
+
+    /**
+     * Construct an immutable instance
+     */
+    public Position(int vert, int horz) {
+        vertical = vert;
+        horizontal = horz;
+    }
+
+    /**
+     * Getter
+     */
+    public int getVertical() {
+        return vertical;
+    }
+
+    /**
+     * Getter
+     */
+    public int getHorizontal() {
+        return horizontal;
+    }
+
+}
+```
 
 The **Maze** is **Observable**, which means that we can look up, down, left or right from our current Position, which will return a **Cell** value. We can also retrieve the total number of keys (it would be always 7), the keys that have already been found, and our current **Position**. We we can also know if the maze have been completed.
 
