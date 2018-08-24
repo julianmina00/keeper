@@ -12,7 +12,7 @@ Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Obser
 
 The maze is randomly generated and is represented by an array of 40x40 cells. Each Cell can be ***EMPTY***, a ***WALL***, a ***KEY*** or the ***DOOR***.
 
- ``` [java]
+```java
 package tws.keeper.model;
 
 /**
@@ -37,7 +37,7 @@ public enum Cell {
 
 The keys, the door and the keeper are placed in random **Positions**. The maze can always be solved.
 
-``` [java]
+```java
 package tws.keeper.model;
 
 public class Position {
