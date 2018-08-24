@@ -2,6 +2,8 @@
 
 The Keeper of the Seven Keys is lost in a maze. There is an exit but it’s locked. He needs to find the seven keys to open the door and escape.
 
+![alt text](https://imgur.com/Nd87llO)
+
 * Use Java 8+ to code some logic capable of finding the keys and escape any random maze. 
 * Use any front end technology to create a web page that can display the maze and show the Keeper of the Keys finding its way out. 
 * Create a REST API that can communicate the front end and the back end.
