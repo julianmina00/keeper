@@ -201,8 +201,10 @@ There are many different devices and browsers out there. Responsive design is a 
 
 Images are great. SVG have some cool advantages.
 
+There are many ways to render the maze in HTML. One posible solution would be to use *javascript* to parse the JSON representation of the maze (it has a *toJson()* function) and then produce a set of HTML *divs*. The *class* of each *div* would correspond to the content of each cell, which could then be rendered differently using CSS.
+
 ```javascript
-function mazeToHtml() {
+function mazeToHtml(maze) {
     html = "";
     for(var v = 0; v < maze.cells.length; v++) {
         html+="<div class=\"mazerow\">";
