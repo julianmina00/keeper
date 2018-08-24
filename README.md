@@ -209,7 +209,8 @@ function mazeToHtml(maze) {
     for(var v = 0; v < maze.cells.length; v++) {
         html+="<div class=\"mazerow\">";
         var row = maze.cells[v];
-        for(var h = 0; h < row.length; h++) html+="<div id=\"h"+h+"v"+v+"\" class=\"mazebrick "+row[h]+"\"></div>";
+        for(var h = 0; h < row.length; h++) 
+           html+="<div id=\"h"+h+"v"+v+"\" class=\"mazebrick "+row[h]+"\"></div>";
         html+="</div>";
     }
     return html;
