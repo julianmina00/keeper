@@ -1,16 +1,16 @@
 # Keeper of the Seven Keys - Full stack coding challenge
 
-The Keeper of the Seven Keys is lost in a maze. There is an exit but it’s locked. He needs to find the seven keys to open the door and escape.
+Locked in a maze, you must find the seven hidden keys in order to escape. Unlock the gate to complete the challenge!
 
 ![Keeper of the Seven Keys](https://i.imgur.com/8K246hGl.png)
 
 * Use Java 8+ to code some logic capable of finding the keys and escape any random maze. 
-* Use any front end technology to create a web page that can display the maze and show the Keeper of the Keys finding its way out. 
+* Use any front end technology to create a web page that can display your maze and show the Keeper of the Keys finding its way out. 
 * Create a REST API that can communicate the front end and the back end.
 
-Web users should be able to start/stop the game or reboot the system (creating a new maze). When the Keeper finds the seven keys and then the door, the web page should display a message indicating that the mission has been accomplished. 
+Website visitors should be able to start/stop the game or reboot the system (creating a new maze). When the Keeper finds the seven keys and then makes it through the door, the web page should display a message indicating that the mission has been accomplished
 
-# The framework
+# Framework
 
 Some Java objects (**Maze**, **Position**), some interfaces (**Keeper**, **Observable**) and some enumerations (**Action**, **Cell**) will be provided to you. ***These classes cannot be modified***.
 
@@ -41,7 +41,7 @@ public enum Cell {
 }
 ```
 
-The keys, the door and the keeper are placed in random **Positions**. The maze can always be solved.
+The keys, the door and the keeper are randomly placed. The maze is always solvable.
 
 ```java
 package tws.keeper.model;
@@ -126,7 +126,7 @@ public enum Action {
 }
 ```
 
-The system should keep calling the *act* method until the maze is solved or the user wants to stop the game. The Keeper should eventually find the seven keys and then find the door, optimising the route as much as possible.
+The system should keep calling the *act* method until the maze is solved or the user wants to stop the game. The Keeper should eventually find the seven keys and then find the door, optimizing the route as much as possible.
 
 # The solution
 
@@ -136,7 +136,9 @@ Then build a game system that can instantiate keepers and mazes, keep track of t
 
 Finally build a website where users can see the **Maze** and the **Keeper**, with UI controls to start the game (make the keeper solve the maze one step at a time), stop the game, generate a new maze, and anything else you consider useful or fun.
 
-![Solution](https://i.imgur.com/PuQiysT.png)
+![Solution](https://i.imgur.com/r34sZHJ.png)
+
+# Considerations
 
 The solution must be written in Java and has to be compatible with the provided framework, which is written in Java 8.
 
@@ -144,8 +146,8 @@ It has to use **Maven** to compile, test and run.
 
 Please upload the project to GitHub. It must have a readme.md file  that contains, at least:
 
-* Your full name
-* The mvn command required to build and start the site
+* Your full name, email address, phone number & Passport or ID Card Number
+* The *mvn* command required to build and start the site
 * The local URL of the web page
 * Instructions to operate the site
 * Basic description of the architecture

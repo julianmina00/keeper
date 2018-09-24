@@ -21,7 +21,7 @@ public class Maze implements Observable {
     private boolean mazeCompleted = false; // Is the lock open
 
     /**
-     * Default maze 50x50 7 keys
+     * Default maze 40x40 7 keys
      */
     public Maze(Keeper keeper) {
         this(keeper, 40, 40, 7);
