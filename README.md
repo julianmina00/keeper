@@ -146,7 +146,7 @@ It has to use **Maven** to compile, test and run.
 
 Please upload the project to GitHub. It must have a readme.md file  that contains, at least:
 
-* Your full name, email address, phone number & Passport or ID Card Number
+* Your full name
 * The *mvn* command required to build and start the site
 * The local URL of the web page
 * Instructions to operate the site
