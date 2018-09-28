@@ -1,6 +1,0 @@
-
-Osquid:S1611%"3Remove the parentheses around the "index" parameter(ä¥•ıÿÿÿÿ
-Jsquid:S1611‰"2Remove the parentheses around the "cell" parameter(Ò·…ˆ
-Csquid:S1612®",Replace this lambda with a method reference.(•¤õ
-msquid:S1149³"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(±ú¦Íıÿÿÿÿ
-"squid:SwitchLastCaseIsDefaultCheck"YComplete cases by adding the missing enum constants or add a default case to this switch.(ë´åİşÿÿÿÿ
