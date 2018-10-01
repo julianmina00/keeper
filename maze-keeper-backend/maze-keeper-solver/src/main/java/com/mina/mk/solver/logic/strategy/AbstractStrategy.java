@@ -37,6 +37,8 @@ public abstract class AbstractStrategy implements MoveStrategy {
         }
         PathPosition nextNeighbor =
                 getKnowledge().findTheFarthestVisitedNeighborInBacktrack(currentPosition);
+        //TODO: evaluate how to deal with the null nextNeighbor caused when there are not
+        // visited neighbors in the backtrackMemory
         getKnowledge().rollbackMemoryUntil(nextNeighbor);
         logger.info("Moving from "+currentPosition+" to the farthest visited neighbor "+nextNeighbor);
         return getActionToMove(currentPosition, nextNeighbor);
